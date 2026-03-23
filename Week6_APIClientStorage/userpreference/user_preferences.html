@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Preferences — Lab Activity</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@400;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="user_preference.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <a class="n-brand" href="../../Myportfolio/myportfolio.html"><span class="a">Zedd</span><span class="b">rafael</span></a>
+  <span class="n-center">User Preferences — Lab Activity</span>
+  <div class="n-right">
+    <a class="nlink" href="#prefs"><span><b>Prefs</b><b>Prefs</b></span></a>
+    <a class="nlink" href="#footer"><span><b>Contact</b><b>Contact</b></span></a>
+    <button class="tbtn" id="themeToggle"><span id="themeIcon">◐</span></button>
+    <a class="nlink" href="../../Week6_APIClientStorage/week6.html"><span><b>← Back</b><b>← Back</b></span></a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-ghost">N01</div>
+  <div class="hero-top">
+    <span class="hero-dot"></span>
+    IT112 Web Systems &amp; Design — Lab 1.1
+  </div>
+  <h1 class="hero-h">
+    <span class="hl">USER</span>
+    <span class="hl hl-accent">PREFER</span>
+    <span class="hl">ENCES</span>
+  </h1>
+  <div class="hero-bottom">
+    <p class="hero-desc">Managing user preferences — theme and language — persisted across sessions using the browser's localStorage API.</p>
+    <a class="hero-cta" href="#prefs">Configure <span>↓</span></a>
+  </div>
+</header>
+
+<!-- TICKER -->
+<div class="ticker">
+  <div class="t-track">
+    <span>HTML Fundamentals</span><span class="t-sep">✦</span>
+    <span>Semantic Multimedia</span><span class="t-sep">✦</span>
+    <span>CSS Basics</span><span class="t-sep">✦</span>
+    <span>JavaScript Basics DOM</span><span class="t-sep">✦</span>
+    <span>JavaScript &amp; Bootstrap</span><span class="t-sep">✦</span>
+    <span>API &amp; Client Storage</span><span class="t-sep">✦</span>
+    <span>Mini Full Stack</span><span class="t-sep">✦</span>
+    <span>HTML Fundamentals</span><span class="t-sep">✦</span>
+    <span>Semantic Multimedia</span><span class="t-sep">✦</span>
+    <span>CSS Basics</span><span class="t-sep">✦</span>
+    <span>JavaScript Basics DOM</span><span class="t-sep">✦</span>
+    <span>JavaScript &amp; Bootstrap</span><span class="t-sep">✦</span>
+    <span>API &amp; Client Storage</span><span class="t-sep">✦</span>
+    <span>Mini Full Stack</span><span class="t-sep">✦</span>
+  </div>
+</div>
+</div>
+
+<!-- PREFERENCES SECTION -->
+<section class="lab-sec" id="prefs">
+  <div class="sec-label rev">01 — Preferences</div>
+
+  <div class="content-row rev">
+    <div class="row-meta">
+      <div class="row-num">01</div>
+      <div class="row-tag">Settings</div>
+    </div>
+    <div class="row-content">
+      <h2 class="sec-title">Configure Preferences</h2>
+      <p class="sec-body">Set your preferred theme and language below. Your selections are saved to localStorage and restored automatically on every visit.</p>
+
+      <div class="pref-card">
+        <div class="pref-card-head">
+          <span class="pref-card-label">⚙️ Settings Panel</span>
+          <span class="pref-status" id="prefStatus">Unsaved</span>
+        </div>
+
+        <div class="pref-body">
+
+          <!-- THEME -->
+          <div class="pref-row">
+            <div class="pref-row-info">
+              <div class="pref-row-label">Theme</div>
+              <div class="pref-row-desc">Choose between dark and light mode</div>
+            </div>
+            <div class="pref-options" id="themeOptions">
+              <button class="pref-opt active" data-val="dark" onclick="selectPref('theme','dark')">
+                <span class="pref-opt-icon">◐</span> Dark
+              </button>
+              <button class="pref-opt" data-val="light" onclick="selectPref('theme','light')">
+                <span class="pref-opt-icon">●</span> Light
+              </button>
+            </div>
+          </div>
+
+          <!-- LANGUAGE -->
+          <div class="pref-row">
+            <div class="pref-row-info">
+              <div class="pref-row-label">Language</div>
+              <div class="pref-row-desc">Select your preferred display language</div>
+            </div>
+            <div class="pref-options" id="languageOptions">
+              <button class="pref-opt active" data-val="en" onclick="selectPref('language','en')">
+                🇺🇸 English
+              </button>
+              <button class="pref-opt" data-val="es" onclick="selectPref('language','es')">
+                🇪🇸 Spanish
+              </button>
+            </div>
+          </div>
+
+          <!-- SAVE -->
+          <button class="save-btn" onclick="savePreferences()">
+            <span>Save Preferences</span>
+            <span class="btn-arrow">→</span>
+          </button>
+
+          <div id="message" class="save-msg"></div>
+
+        </div>
+      </div>
+
+      <!-- CURRENT VALUES DISPLAY -->
+      <div class="pref-summary rev" id="prefSummary">
+        <div class="summary-label">Currently Saved</div>
+        <div class="summary-grid">
+          <div class="summary-item">
+            <span class="summary-key">Theme</span>
+            <span class="summary-val" id="savedThemeDisplay">—</span>
+          </div>
+          <div class="summary-item">
+            <span class="summary-key">Language</span>
+            <span class="summary-val" id="savedLangDisplay">—</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="footer">
+  <div class="ft rev">
+    <div>
+      <div class="fn">Zeddrafael</div>
+      <div class="fu">Bicol University Polangui</div>
+    </div>
+  </div>
+
+  <div class="socials rev">
+    <a href="https://www.facebook.com/share/1ijRHHnmjX/" target="_blank" class="sp" data-p="fb">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+      <span class="slbl"><span class="sli"><b>Facebook</b><b>Facebook</b></span></span>
+    </a>
+    <a href="https://www.instagram.com/zeddrafael?igsh=em12OGs4Z3NnYnFo" target="_blank" class="sp" data-p="ig">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+      <span class="slbl"><span class="sli"><b>Instagram</b><b>Instagram</b></span></span>
+    </a>
+    <a href="mailto:cedrickrafael6232006@gmail.com" class="sp" data-p="mail">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      <span class="slbl"><span class="sli"><b>Email Me</b><b>Email Me</b></span></span>
+    </a>
+    <a href="https://github.com/cedrickrafaelodono24-del" target="_blank" class="sp" data-p="gh">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+      <span class="slbl"><span class="sli"><b>GitHub</b><b>GitHub</b></span></span>
+    </a>
+  </div>
+
+  <div class="fbot">
+    <span>© 2026 Cedrick Rafael Odoño. All Rights Reserved.</span>
+    <span><a href="../../Myportfolio/myportfolio.html" class="back-link">← Back to Portfolio</a></span>
+  </div>
+</footer>
+
+<script src="user_preference.js"></script>
+</body>
+</html>

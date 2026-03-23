@@ -83,5 +83,5 @@ Live Render Link: (https://week7-nodejs-labc.onrender.com)
 ---
 
 ## Notes
-This project was developed as part of the Midterm Laboratory Requirement for IT 112 — Web Systems and Technologies at Bicol University Polangui.  
+This project was developed as part of the Midterm Laboratory Requirement for IT 112 Web Systems and Technologies at Bicol University Polangui.  
 All weekly pages share a unified design system (tokens, nav, footer, scroll reveal) so the portfolio feels cohesive across every activity.

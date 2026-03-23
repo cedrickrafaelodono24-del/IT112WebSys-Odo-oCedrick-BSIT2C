@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Week 5 — Bootstrap & Multimedia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@400;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="week5.css">
+</head>
+<body>
+
+<nav id="nav">
+  <a class="n-brand" href="../Myportfolio/myportfolio.html"><span class="a">Zedd</span><span class="b">rafael</span></a>
+  <span class="n-center">Week 5 — Lab Activity</span>
+  <div class="n-right">
+    <a class="nlink" href="#about"><span><b>About</b><b>About</b></span></a>
+    <a class="nlink" href="#services"><span><b>JDM</b><b>JDM</b></span></a>
+    <a class="nlink" href="#multimedia"><span><b>Media</b><b>Media</b></span></a>
+    <button class="tbtn" id="themeToggle"><span id="themeIcon">◐</span></button>
+    <a class="nlink" href="../Myportfolio/myportfolio.html"><span><b>← Back</b><b>← Back</b></span></a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-ghost">W05</div>
+
+  <div class="hero-carousel" id="heroCarousel">
+    <div class="carousel-track" id="carouselTrack">
+      <div class="carousel-slide active">
+        <img src="./pictures/nissan.jpg" alt="Nissan GT-R">
+        <div class="slide-overlay"></div>
+      </div>
+      <div class="carousel-slide">
+        <img src="./pictures/image2.jpg" alt="Profile">
+        <div class="slide-overlay"></div>
+      </div>
+      <div class="carousel-slide">
+        <img src="./pictures/image1.jpg" alt="R35">
+        <div class="slide-overlay"></div>
+      </div>
+      <div class="carousel-slide">
+        <img src="./pictures/image6.avif" alt="Skyline">
+        <div class="slide-overlay"></div>
+      </div>
+      <div class="carousel-slide">
+        <img src="./pictures/image7.avif" alt="Skyline">
+        <div class="slide-overlay"></div>
+      </div>
+      <div class="carousel-slide">
+        <img src="./pictures/image4.jpg" alt="Skyline">
+        <div class="slide-overlay"></div>
+      </div>
+      <div class="carousel-slide">
+        <img src="./pictures/image5.jpg" alt="Skyline">
+        <div class="slide-overlay"></div>
+      </div>
+    </div>
+    <button class="carousel-prev" id="carouselPrev" aria-label="Previous">←</button>
+    <button class="carousel-next" id="carouselNext" aria-label="Next">→</button>
+    <div class="carousel-dots" id="carouselDots"></div>
+  </div>
+
+  <div class="hero-content">
+    <div class="hero-top">
+      <span class="hero-dot"></span>
+      IT112 Web Systems &amp; Design — Laboratory 5
+    </div>
+    <h1 class="hero-h">
+      <span class="hl">MY</span>
+      <span class="hl hl-accent">PERSONAL</span>
+      <span class="hl">PROFILE</span>
+    </h1>
+    <div class="hero-bottom">
+      <p class="hero-desc">A personal profile page — who I am, where my love for cars started, and the multimedia that tells that story.</p>
+      <a class="hero-cta" href="#about">View Work <span>↓</span></a>
+    </div>
+  </div>
+</header>
+
+<!-- TICKER -->
+<div class="ticker">
+  <div class="t-track">
+    <span>HTML Fundamentals</span><span class="t-sep">✦</span>
+    <span>Semantic Multimedia</span><span class="t-sep">✦</span>
+    <span>CSS Basics</span><span class="t-sep">✦</span>
+    <span>JavaScript Basics DOM</span><span class="t-sep">✦</span>
+    <span>JavaScript &amp; Bootstrap</span><span class="t-sep">✦</span>
+    <span>API &amp; Client Storage</span><span class="t-sep">✦</span>
+    <span>Mini Full Stack</span><span class="t-sep">✦</span>
+    <span>HTML Fundamentals</span><span class="t-sep">✦</span>
+    <span>Semantic Multimedia</span><span class="t-sep">✦</span>
+    <span>CSS Basics</span><span class="t-sep">✦</span>
+    <span>JavaScript Basics DOM</span><span class="t-sep">✦</span>
+    <span>JavaScript &amp; Bootstrap</span><span class="t-sep">✦</span>
+    <span>API &amp; Client Storage</span><span class="t-sep">✦</span>
+    <span>Mini Full Stack</span><span class="t-sep">✦</span>
+  </div>
+</div>
+
+<!-- ABOUT — personal with baby pic -->
+<section class="lab-sec" id="about">
+  <div class="sec-label rev">01 — About</div>
+  <div class="content-row rev">
+    <div class="row-meta">
+      <div class="row-num">01</div>
+      <div class="row-tag">About</div>
+    </div>
+    <div class="row-content">
+      <h2 class="sec-title">About Myself</h2>
+      <div class="about-grid">
+        <div class="about-fields">
+          <div class="field">
+            <span class="field-key">Name</span>
+            <span class="field-val">Cedrick R. Odono</span>
+          </div>
+          <div class="field">
+            <span class="field-key">Course / Block</span>
+            <span class="field-val">Information Technology — 2C</span>
+          </div>
+          <div class="field">
+            <span class="field-key">Hobbies</span>
+            <span class="field-val">When I'm not coding or studying, I enjoy exploring automotive history — specifically the evolution of Japanese domestic market (JDM) icons like the Nissan GT-R.</span>
+          </div>
+          <div class="field">
+            <span class="field-key">The Photo</span>
+            <span class="field-val">As a kid, my world revolved around toy cars—those carefree days when play was all I knew. Long before I understood what a GT-R was, the spark was already there. Looking back, I realize that curiosity and love for cool things never left me; it simply grew sharper, evolving into a deep appreciation for JDM engineering and culture. Now, I’m applying that passion to my webpage, hoping that one day I’ll be able to buy one of my dream cars.</span>
+          </div>
+        </div>
+        <div class="about-img-wrap">
+          <img src="./pictures/me.jpg" alt="Cedrick as a kid" class="about-img">
+          <div class="about-img-caption">Me, before I knew Godzilla was a car. 🚗</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- JDM ICONS -->
+<section class="lab-sec" id="services">
+  <div class="sec-label rev">02 — JDM Icons</div>
+  <div class="content-row rev">
+    <div class="row-meta">
+      <div class="row-num">02</div>
+      <div class="row-tag">Cars</div>
+    </div>
+    <div class="row-content">
+      <h2 class="sec-title">JDM Icons</h2>
+      <p class="sec-body">The kid in that photo grew up to love these machines. Here are the cars that shaped that obsession — legends of Japanese domestic market engineering.</p>
+
+      <div class="cards-grid">
+        <div class="srv-card">
+          <div class="srv-img-wrap">
+            <img src="./pictures/image1.jpg" alt="R35 GT-R">
+            <div class="srv-img-overlay"></div>
+          </div>
+          <div class="srv-body">
+            <div class="srv-tag">GT-R</div>
+            <h3 class="srv-name">Nissan R35</h3>
+            <p class="srv-desc">The final chapter of Godzilla — a supercar killer built by Takumi technicians at the Tochigi plant.</p>
+            <a href="https://philippines.nissannews.com/en-PH/releases/nissan-bids-fond-farewell-to-r35-gt-r-as-final-vehicle-rolls-off-the-line" class="srv-btn">Learn More <span>→</span></a>
+          </div>
+        </div>
+
+        <div class="srv-card">
+          <div class="srv-img-wrap">
+            <img src="./pictures/image6.avif" alt="Skyline">
+            <div class="srv-img-overlay"></div>
+          </div>
+          <div class="srv-body">
+            <div class="srv-tag">Skyline</div>
+            <h3 class="srv-name">Nissan Skyline</h3>
+            <p class="srv-desc">The iconic R32–R34 lineage — the original Godzilla that dominated tracks worldwide with its legendary RB26 engine.</p>
+            <a href="https://www.nissanusa.com/experience-nissan/news-and-events/evolution-from-skyline-to-gt-r.html" class="srv-btn">Learn More <span>→</span></a>
+          </div>
+        </div>
+
+        <div class="srv-card">
+          <div class="srv-img-wrap">
+            <img src="./pictures/huhu.avif" alt="GTR Classic">
+            <div class="srv-img-overlay"></div>
+          </div>
+          <div class="srv-body">
+            <div class="srv-tag">Classic</div>
+            <h3 class="srv-name">GTR Legacy</h3>
+            <p class="srv-desc">A heritage that spans decades — from the KPGC10 to the R35, the GT-R name carries decades of racing pedigree.</p>
+            <a href="https://www.nissan-global.com/EN/STORIES/RELEASES/a-legacy-of-passion-and-performance/" class="srv-btn">Learn More <span>→</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MULTIMEDIA -->
+<section class="lab-sec" id="multimedia">
+  <div class="sec-label rev">03 — Multimedia</div>
+
+  <div class="media-row rev">
+    <div class="row-meta">
+      <div class="row-num">03</div>
+      <div class="row-tag">Image</div>
+    </div>
+    <div class="row-content">
+      <h2 class="sec-title">Multimedia Features</h2>
+      <figure>
+        <img src="./pictures/nissan.jpg" alt="Nissan R35 GT-R Legacy" class="media-img">
+        <figcaption>
+          <strong>Figure 1: The R35 GT-R Legacy.</strong> The car that turned a kid who liked cool things into someone who genuinely studies automotive history.
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <div class="media-row rev">
+    <div class="row-meta">
+      <div class="row-num">04</div>
+      <div class="row-tag">Video</div>
+    </div>
+    <div class="row-content">
+      <div class="video-wrap">
+        <video controls>
+          <source src="GTR.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <p class="video-caption">
+          <strong>Figure 2: Farewell to a Legend.</strong> Marking the official conclusion of the R35 production (2007–2025).
+          From the debut T-Spec to the final farewell, Godzilla leaves behind an unmatched legacy of
+          <em class="em-accent">relentless innovation</em>. The same spirit, I hope, that kid in the photo still carries.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer id="footer">
+  <div class="ft rev">
+    <div>
+      <div class="fn">Zeddrafael</div>
+      <div class="fu">Bicol University Polangui</div>
+    </div>
+  </div>
+
+  <div class="socials rev">
+    <a href="https://www.facebook.com/share/1ijRHHnmjX/" target="_blank" class="sp" data-p="fb">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+      <span class="slbl"><span class="sli"><b>Facebook</b><b>Facebook</b></span></span>
+    </a>
+    <a href="https://www.instagram.com/zeddrafael?igsh=em12OGs4Z3NnYnFo" target="_blank" class="sp" data-p="ig">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+      <span class="slbl"><span class="sli"><b>Instagram</b><b>Instagram</b></span></span>
+    </a>
+    <a href="mailto:cedrickrafael6232006@gmail.com" class="sp" data-p="mail">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      <span class="slbl"><span class="sli"><b>Email Me</b><b>Email Me</b></span></span>
+    </a>
+    <a href="https://github.com/cedrickrafaelodono24-del" target="_blank" class="sp" data-p="gh">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+      <span class="slbl"><span class="sli"><b>GitHub</b><b>GitHub</b></span></span>
+    </a>
+  </div>
+
+  <div class="fbot">
+    <span>© 2026 Cedrick Rafael Odoño. All Rights Reserved.</span>
+    <span><a href="../Myportfolio/myportfolio.html" class="back-link">← Back to Portfolio</a></span>
+  </div>
+</footer>
+
+<script src="week5.js"></script>
+</body>
+</html>

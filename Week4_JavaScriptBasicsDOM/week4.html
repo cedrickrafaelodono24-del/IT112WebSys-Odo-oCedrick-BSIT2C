@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Week 4 — JavaScript & DOM</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@400;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="week4.css">
+</head>
+<body>
+
+<nav id="nav">
+  <a class="n-brand" href="../Myportfolio/myportfolio.html"><span class="a">Zedd</span><span class="b">rafael</span></a>
+  <span class="n-center">Week 4 — Lab Activity</span>
+  <div class="n-right">
+    <a class="nlink" href="#about"><span><b>About</b><b>About</b></span></a>
+    <a class="nlink" href="#tasks"><span><b>Tasks</b><b>Tasks</b></span></a>
+    <a class="nlink" href="#contact"><span><b>Contact</b><b>Contact</b></span></a>
+    <button class="tbtn" id="themeToggle"><span id="themeIcon">◐</span></button>
+    <a class="nlink" href="../Myportfolio/myportfolio.html"><span><b>← Back</b><b>← Back</b></span></a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-ghost">W04</div>
+  <div class="hero-top">
+    <span class="hero-dot"></span>
+    IT112 Web Systems &amp; Design — Laboratory 4
+  </div>
+  <h1 class="hero-h" id="heading">
+    <span class="hl">JAVASCRIPT</span>
+    <span class="hl hl-accent">&amp; DOM</span>
+    <span class="hl">BASICS</span>
+  </h1>
+  <div class="hero-bottom">
+    <p class="hero-desc">My Week 4 lab; where the page finally started talking back. JavaScript made everything interactive and alive.</p>
+    <a class="hero-cta" href="#about">View Work <span>↓</span></a>
+  </div>
+</header>
+
+<!-- TICKER -->
+<div class="ticker">
+  <div class="t-track">
+    <span>HTML Fundamentals</span><span class="t-sep">✦</span>
+    <span>Semantic Multimedia</span><span class="t-sep">✦</span>
+    <span>CSS Basics</span><span class="t-sep">✦</span>
+    <span>JavaScript Basics DOM</span><span class="t-sep">✦</span>
+    <span>JavaScript &amp; Bootstrap</span><span class="t-sep">✦</span>
+    <span>API &amp; Client Storage</span><span class="t-sep">✦</span>
+    <span>Mini Full Stack</span><span class="t-sep">✦</span>
+    <span>HTML Fundamentals</span><span class="t-sep">✦</span>
+    <span>Semantic Multimedia</span><span class="t-sep">✦</span>
+    <span>CSS Basics</span><span class="t-sep">✦</span>
+    <span>JavaScript Basics DOM</span><span class="t-sep">✦</span>
+    <span>JavaScript &amp; Bootstrap</span><span class="t-sep">✦</span>
+    <span>API &amp; Client Storage</span><span class="t-sep">✦</span>
+    <span>Mini Full Stack</span><span class="t-sep">✦</span>
+  </div>
+</div>
+
+<!-- ABOUT — personal reflection -->
+<section class="lab-sec" id="about">
+  <div class="sec-label rev">01 — About</div>
+  <div class="content-row rev">
+    <div class="row-meta">
+      <div class="row-num">01</div>
+      <div class="row-tag">The Story</div>
+    </div>
+    <div class="row-content">
+      <h2 class="sec-title">What Happened This Week</h2>
+      <p class="sec-body">Week 4 was the week everything stopped being static. I had HTML and CSS working the page looked good, but it couldn't do anything. Then JavaScript came in and changed that completely.</p>
+      <p class="sec-body">The first thing I built was the task manager. Creating elements with createElement, appending them to the list, and removing them on click, it felt like the page was actually responding to me. That was a completely different feeling from writing CSS.</p>
+      <p class="sec-body">The modal dialog was the part I was most proud of. Hiding and showing it by toggling a class, animating it in with CSS transitions, closing it on backdrop click or Escape key; it felt like I was building something real, not just a lab exercise.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURE 1 — Task Manager -->
+<section class="lab-sec" id="tasks">
+  <div class="sec-label rev">02 — Feature</div>
+  <div class="content-row rev">
+    <div class="row-meta">
+      <div class="row-num">02</div>
+      <div class="row-tag">Task Manager</div>
+    </div>
+    <div class="row-content">
+      <h2 class="sec-title">Task Manager</h2>
+      <p class="sec-body">The first feature I built; add tasks, click to mark complete, delete with the × button. All DOM manipulation, no libraries.</p>
+      <div class="task-ui">
+        <div class="task-input-row">
+          <input class="task-input" type="text" id="taskInput" placeholder="Enter a task...">
+          <button class="task-add-btn" id="addTask"><span>Add</span><span>+</span></button>
+        </div>
+        <ul class="task-list" id="taskList"></ul>
+        <div class="task-empty" id="taskEmpty">No tasks yet — add one above.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURE 2 — Contact Form with Modal -->
+<section class="lab-sec" id="contact">
+  <div class="sec-label rev">03 — Feature</div>
+  <div class="content-row rev">
+    <div class="row-meta">
+      <div class="row-num">03</div>
+      <div class="row-tag">Contact Form</div>
+    </div>
+    <div class="row-content">
+      <h2 class="sec-title">Contact Form</h2>
+      <p class="sec-body">The second feature; a validated contact form that fires a modal dialog on submit. JavaScript handles validation, form reset, and modal toggling.</p>
+      <form class="contact-form" id="contactForm">
+        <div class="form-group">
+          <label class="form-label" for="email">Email</label>
+          <input class="form-input" type="email" id="email" placeholder="your@email.com" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="message">Message</label>
+          <textarea class="form-input form-textarea" id="message" name="message" placeholder="Write your message here..." required></textarea>
+        </div>
+        <button class="form-btn" type="submit">
+          <span>Submit</span>
+          <span class="btn-arrow">→</span>
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer id="footer">
+  <div class="ft rev">
+    <div>
+      <div class="fn">Zeddrafael</div>
+      <div class="fu">Bicol University Polangui</div>
+    </div>
+  </div>
+  <div class="socials rev">
+    <a href="https://www.facebook.com/share/1ijRHHnmjX/" target="_blank" class="sp" data-p="fb">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+      <span class="slbl"><span class="sli"><b>Facebook</b><b>Facebook</b></span></span>
+    </a>
+    <a href="https://www.instagram.com/zeddrafael?igsh=em12OGs4Z3NnYnFo" target="_blank" class="sp" data-p="ig">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+      <span class="slbl"><span class="sli"><b>Instagram</b><b>Instagram</b></span></span>
+    </a>
+    <a href="mailto:cedrickrafael6232006@gmail.com" class="sp" data-p="mail">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      <span class="slbl"><span class="sli"><b>Email Me</b><b>Email Me</b></span></span>
+    </a>
+    <a href="https://github.com/cedrickrafaelodono24-del" target="_blank" class="sp" data-p="gh">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+      <span class="slbl"><span class="sli"><b>GitHub</b><b>GitHub</b></span></span>
+    </a>
+  </div>
+  <div class="fbot">
+    <span>© 2026 Cedrick Rafael Odoño. All Rights Reserved.</span>
+    <span><a href="../Myportfolio/myportfolio.html" class="back-link">← Back to Portfolio</a></span>
+  </div>
+</footer>
+
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal-box">
+    <div class="modal-icon">✦</div>
+    <p class="modal-msg" id="modalMessage"></p>
+    <button class="modal-close" id="closeModal">Close</button>
+  </div>
+</div>
+
+<script src="week4.js"></script>
+</body>
+</html>
